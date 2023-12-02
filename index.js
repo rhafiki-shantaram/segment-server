@@ -24,7 +24,7 @@ app.post('/segment', async (req, res) => {
 
     try {
         const segmentBuffer = await segmentAudio(url, tsStart, tsEnd);
-        console.log('Audio Buffer:', segmentBuffer);
+        console.log('Buffer byte length:', segmentBuffer.byteLength);
 /*
         // Write the buffer to an MP3 file
         const filename = `segment_${Date.now()}.mp3`;
